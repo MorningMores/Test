@@ -68,7 +68,7 @@ jobs:
           path: main_backend/target/surefire-reports/
 
       - name: 📤 Upload coverage
-        uses: codecov/codecov-action@v4
+        uses: codecov/codecov-action@v5
         with:
           files: ./main_backend/target/site/jacoco/jacoco.xml
           flags: backend-integration

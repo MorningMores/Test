@@ -39,7 +39,7 @@ jobs:
         run: npm run test:coverage
 
       - name: 📤 Upload coverage
-        uses: codecov/codecov-action@v4
+        uses: codecov/codecov-action@v5
         with:
           files: ./main_frontend/concert1/coverage/lcov.info
           flags: frontend-unit
@@ -81,7 +81,7 @@ jobs:
         if: always()
 
       - name: 📤 Upload coverage
-        uses: codecov/codecov-action@v4
+        uses: codecov/codecov-action@v5
         with:
           files: ./main_backend/target/site/jacoco/jacoco.xml
           flags: backend
