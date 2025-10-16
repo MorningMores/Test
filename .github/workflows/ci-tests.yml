@@ -78,7 +78,7 @@ jobs:
 
       - name: 💬 Comment coverage on PR
         if: github.event_name == 'pull_request'
-        uses: actions/github-script@v7
+        uses: actions/github-script@v8
         with:
           script: |
             const branches = '${{ steps.coverage-check.outputs.branches }}';
@@ -227,7 +227,7 @@ jobs:
 
       - name: 💬 Comment backend coverage on PR
         if: github.event_name == 'pull_request'
-        uses: actions/github-script@v7
+        uses: actions/github-script@v8
         with:
           script: |
             const instructions = '${{ steps.backend-coverage.outputs.instructions }}';
@@ -369,7 +369,7 @@ jobs:
     
     steps:
       - name: 📝 Create GitHub Issue
-        uses: actions/github-script@v7
+        uses: actions/github-script@v8
         with:
           script: |
             const runUrl = `https://github.com/${context.repo.owner}/${context.repo.repo}/actions/runs/${context.runId}`;
