@@ -112,7 +112,7 @@ jobs:
 
       - name: 📤 Upload E2E coverage
         if: always()
-        uses: codecov/codecov-action@v4
+        uses: codecov/codecov-action@v5
         with:
           files: ./main_frontend/concert1/coverage/lcov.info
           flags: e2e
