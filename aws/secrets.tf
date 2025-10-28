@@ -6,6 +6,10 @@ resource "aws_secretsmanager_secret" "db_password" {
   tags = {
     Name = "${var.project_name}-rds-password"
   }
+
+  lifecycle {
+    ignore_changes = [tags_all]
+  }
 }
 
 # Store the RDS password in Secrets Manager
