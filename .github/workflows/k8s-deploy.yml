@@ -115,7 +115,7 @@ jobs:
           echo "owner=${GITHUB_REPOSITORY_OWNER,,}" >> $GITHUB_OUTPUT
 
       - name: �🐳 Build and push backend image
-        uses: docker/build-push-action@v5
+        uses: docker/build-push-action@v6
         with:
           context: main_backend
           file: main_backend/Dockerfile.k8s
@@ -129,7 +129,7 @@ jobs:
       # Frontend build happens in Docker - no artifact download needed
 
       - name: 🐳 Build and push frontend image
-        uses: docker/build-push-action@v5
+        uses: docker/build-push-action@v6
         with:
           context: main_frontend/concert1
           file: main_frontend/concert1/Dockerfile.k8s
