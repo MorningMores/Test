@@ -70,3 +70,11 @@ terraform.tfstate.backup
 *.tfplan
 *.tfvars
 .terraform.tfstate.lock.info
+
+# === Secrets / private keys (never commit) ===
+*.pem
+*.ppk
+*.key
+*.tfstate
+*.tfstate.*
+.env.production
